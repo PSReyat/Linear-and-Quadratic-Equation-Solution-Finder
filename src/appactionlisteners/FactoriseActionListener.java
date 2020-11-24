@@ -46,21 +46,32 @@ public class FactoriseActionListener implements ActionListener{
 		double firstSolution = (-1) * this.logic.getFirstSolution();
 		double secondSolution = (-1) * this.logic.getSecondSolution();
 		
-		if(firstSolution > 0 && secondSolution > 0) {
+		String first2DP = String.format("%.2f", firstSolution);
+		String second2DP = String.format("%.2f", secondSolution);
+		
+		if(Double.parseDouble(this.a.getText()) != 0) {
 			
-			this.answerBrackets.setText("(x + " + firstSolution + ")(x + " + secondSolution + ")");
-			
-		}else if(firstSolution > 0 && secondSolution < 0) {
-			
-			this.answerBrackets.setText("(x + " + firstSolution + ")(x " + secondSolution + ")");
-			
-		}else if(firstSolution < 0 && secondSolution > 0) {
-			
-			this.answerBrackets.setText("(x " + firstSolution + ")(x + " + secondSolution + ")");
+			if(firstSolution > 0 && secondSolution > 0) {
+				
+				this.answerBrackets.setText("(x + " + first2DP + ")(x + " + second2DP + ")");
+				
+			}else if(firstSolution > 0 && secondSolution < 0) {
+				
+				this.answerBrackets.setText("(x + " + first2DP + ")(x " + second2DP + ")");
+				
+			}else if(firstSolution < 0 && secondSolution > 0) {
+				
+				this.answerBrackets.setText("(x " + first2DP + ")(x + " + second2DP + ")");
+				
+			}else {
+				
+				this.answerBrackets.setText("(x " + first2DP + ")(x " + second2DP+ ")");
+				
+			}
 			
 		}else {
 			
-			this.answerBrackets.setText("(x " + firstSolution + ")(x " + secondSolution + ")");
+			this.answerBrackets.setText("X^2 coefficient must be greater than 0.");
 			
 		}
 		

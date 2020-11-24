@@ -37,11 +37,11 @@ public class SolveActionListener implements ActionListener{
 	
 	public void quadraticSolution() {
 		
-		double linearA = Double.parseDouble(this.a.getText());
-		double linearB = Double.parseDouble(this.b.getText());
-		double linearC = Double.parseDouble(this.c.getText());
+		double quadA = Double.parseDouble(this.a.getText());
+		double quadB = Double.parseDouble(this.b.getText());
+		double quadC = Double.parseDouble(this.c.getText());
 		
-		this.logic = new AppLogic(linearA, linearB, linearC);
+		this.logic = new AppLogic(quadA, quadB, quadC);
 		
 		this.isSqrtPossible = this.logic.isSqrtPossible();
 		this.logic.setFirstSolution();
@@ -60,11 +60,7 @@ public class SolveActionListener implements ActionListener{
 			
 		}else {
 			
-			if(this.a.getText().isEmpty()) {
-				
-				
-				
-			}else {
+			if(!this.a.getText().isEmpty()) {
 				
 				quadraticSolution();
 				
