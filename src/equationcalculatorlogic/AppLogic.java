@@ -36,11 +36,11 @@ public class AppLogic {
 	}
 
 	public void setFirstSolution() {
-		this.firstSolution = (-1) * ((-1) * this.b + Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
+		this.firstSolution = ((-1) * this.b + Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
 	}
 
 	public void setSecondSolution() {
-		this.secondSolution = (-1) * ((-1) * this.b - Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
+		this.secondSolution = ((-1) * this.b - Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
 	}
 
 	public void setLinearSolution() {
