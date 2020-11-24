@@ -9,6 +9,7 @@ the polynomial.
 ## Technologies used
 - Swing
 ## Look and functionality of the app
+- Gif
 ![alt-text](https://media.giphy.com/media/MiY5HbgQM2xOtjl2Wa/giphy.gif)
 - Design of the app
 ![alt-text](https://github.com/PSReyat/Linear-and-Quadratic-Equation-Solution-Finder/blob/master/equation%20solver%20design.jpg)
