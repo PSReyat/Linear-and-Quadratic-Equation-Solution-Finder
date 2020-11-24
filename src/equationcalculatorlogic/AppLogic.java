@@ -46,6 +46,14 @@ public class AppLogic {
 	public void setLinearSolution() {
 		this.linearSolution = (-1) * (this.c / this.b);
 	}
+	
+	public double getFirstSolution() {
+		return this.firstSolution;
+	}
+	
+	public double getSecondSolution() {
+		return this.secondSolution;
+	}
 
 	public boolean isSqrtPossible() {
 		

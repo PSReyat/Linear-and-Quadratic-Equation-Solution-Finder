@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.WindowConstants;
 
+import appactionlisteners.FactoriseActionListener;
 import appactionlisteners.SolveActionListener;
 import appactionlisteners.ToggleListener;
 
@@ -26,10 +27,12 @@ public class AppUI implements Runnable{
 	private JTextField b;
 	private JTextField c;
 	
+	// factorise button
+	private JButton factorise;
+	private JTextField answerBrackets;
+	
 	// equals button
 	private JButton solve;
-	
-	// read-only text field
 	private JTextField answer;
 	
 	public AppUI() {}
@@ -38,7 +41,7 @@ public class AppUI implements Runnable{
 	public void run() {
 
 		this.uiFrame = new JFrame("Linear and Quadratic Equation Calculator");
-		this.uiFrame.setPreferredSize(new Dimension(600, 200));
+		this.uiFrame.setPreferredSize(new Dimension(600, 250));
 		this.uiFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		createComponents(this.uiFrame.getContentPane());
 		this.uiFrame.pack();
@@ -55,12 +58,16 @@ public class AppUI implements Runnable{
 		this.c = new JTextField();
 		this.solve = new JButton("Solve");
 		this.answer = new JTextField();
+		this.factorise = new JButton("Factorise");
+		this.answerBrackets = new JTextField();
 		
 		// Action listeners
 		SolveActionListener sal = new SolveActionListener(this.a, this.b, this.c, this.answer);
 		this.solve.addActionListener(sal);
-		ToggleListener toggle = new ToggleListener(this.a, this.toggleEquationOrder);
+		ToggleListener toggle = new ToggleListener(this.a, this.toggleEquationOrder, this.factorise, this.answerBrackets);
 		this.toggleEquationOrder.addActionListener(toggle);
+		FactoriseActionListener fal = new FactoriseActionListener(this.a, this.b, this.c, this.answerBrackets);
+		this.factorise.addActionListener(fal);
 		
 		// Labels to fill in algebraic terms for the polynomial
 		JLabel xSquared = new JLabel("X^2");
@@ -85,6 +92,8 @@ public class AppUI implements Runnable{
 				.addComponent(this.toggleEquationOrder)
 				.addComponent(x)
 				.addComponent(this.b)
+				.addComponent(this.factorise)
+				.addComponent(this.answerBrackets)
 				.addComponent(this.solve)
 				.addComponent(this.answer))
 			.addGroup(layout.createParallelGroup(GroupLayout.Alignment.CENTER)
@@ -112,6 +121,10 @@ public class AppUI implements Runnable{
 				.addComponent(this.c)
 				.addComponent(equals)
 				.addComponent(zero))
+			.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				.addComponent(this.factorise))
+			.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+				.addComponent(this.answerBrackets))
 			.addGroup(layout.createParallelGroup(GroupLayout.Alignment.CENTER)
 				.addComponent(this.solve))
 			.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
