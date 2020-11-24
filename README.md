@@ -5,8 +5,8 @@ Algebra is one of the topics in mathematics that students seem to have trouble w
 is a point of regular contention amongst students. This application is to check whether the solutions they got were correct by entering in the coefficients of
 the polynomial.
 ## Look and functionality of the app
-![alt-text](https://github.com/PSReyat/Linear-and-Quadratic-Equation-Solution-Finder/blob/master/equation%20solver.jpg)
+- 
 ## Quick link to code
 [Link](https://github.com/PSReyat/Linear-and-Quadratic-Equation-Solution-Finder/tree/master/src)
 ## Technologies used
-- Swing library
+- Swing
