@@ -9,7 +9,7 @@ Teaching maths and physics at a secondary school level and being a maths and phy
 ## Look and functionality of the app
 - Gif
 
-![alt-text](https://gph.is/g/ZOJydjj)
+![alt-text](https://giphy.com/gifs/MiY5HbgQM2xOtjl2Wa/html5)
 - Design of the app
 ![alt-text](https://github.com/PSReyat/Linear-and-Quadratic-Equation-Solution-Finder/blob/master/equation%20solver%20design.jpg)
 - Solving a quadratic equation
